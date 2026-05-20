@@ -85,8 +85,8 @@ export const TRANSFORMATIONS: Transformation[] = [
   {
     id: 't1',
     title: "Signature Hair Color",
-    before: "https://images.unsplash.com/photo-1595476108010-b4d1f80d77d2?auto=format&fit=crop&q=80&w=800",
-    after: "https://images.unsplash.com/photo-1519735817352-ad9a9962243d?auto=format&fit=crop&q=80&w=800",
+    before: "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&q=80&w=800",
+    after: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=800",
     category: "Hair"
   }
 ];

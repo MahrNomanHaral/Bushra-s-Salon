@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Instagram, Facebook, Mail, MapPin, Phone, MessageSquare } from 'lucide-react';
 import { BRAND } from '../constants';
+import { ROUTES } from '../data/serviceCategories';
 
 export function Footer() {
   return (
@@ -40,9 +41,9 @@ export function Footer() {
         <div>
           <h4 className="font-serif text-lg tracking-wider mb-6 text-white italic">Specialties</h4>
           <ul className="space-y-4 text-sm font-light text-luxury-nude/60">
-            <li><Link to="/hair" className="hover:text-luxury-gold transition-colors tracking-widest uppercase text-[11px]">Hair Artistry</Link></li>
-            <li><Link to="/skin" className="hover:text-luxury-gold transition-colors tracking-widest uppercase text-[11px]">Skin Therapy</Link></li>
-            <li><Link to="/beauty-body" className="hover:text-luxury-gold transition-colors tracking-widest uppercase text-[11px]">Bridal & Spa</Link></li>
+            <li><Link to={ROUTES.hairServices} className="hover:text-luxury-gold transition-colors tracking-widest uppercase text-[11px]">Hair Artistry</Link></li>
+            <li><Link to={ROUTES.skinServices} className="hover:text-luxury-gold transition-colors tracking-widest uppercase text-[11px]">Skin Therapy</Link></li>
+            <li><Link to={ROUTES.beautyBodyServices} className="hover:text-luxury-gold transition-colors tracking-widest uppercase text-[11px]">Bridal & Spa</Link></li>
             <li><Link to="/booking" className="hover:text-luxury-gold transition-colors tracking-widest uppercase text-[11px]">Book Session</Link></li>
           </ul>
         </div>

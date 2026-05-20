@@ -2,24 +2,25 @@ import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import { PageTransition } from '../components/PageTransition';
+import { ROUTES } from '../data/serviceCategories';
 
 export default function Services() {
   const categories = [
     {
       title: 'Hair Services',
-      path: '/hair',
+      path: ROUTES.hairServices,
       image: 'https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&q=80&w=1000',
       description: 'Precision cutting, couture styling, and advanced color treatments tailored to your unique identity.'
     },
     {
       title: 'Skin Services',
-      path: '/skin',
+      path: ROUTES.skinServices,
       image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=1000',
       description: 'Clinical-grade facials and rejuvenating skin therapies designed to reveal your inner radiance.'
     },
     {
       title: 'Beauty & Body',
-      path: '/beauty-body',
+      path: ROUTES.beautyBodyServices,
       image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=1000',
       description: 'Ultimate bridal makeovers, relaxing spa treatments, and professional grooming rituals.'
     }

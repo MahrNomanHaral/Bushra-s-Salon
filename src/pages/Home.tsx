@@ -34,53 +34,101 @@ export default function Home() {
       </Helmet>
       
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[100svh] flex items-end md:items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=2000" 
-            alt="Luxury Salon Interior" 
-            className="w-full h-full object-cover brightness-[0.45] contrast-[1.1]"
+          <img
+            src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=2000"
+            alt="Bushra's Salon interior"
+            className="w-full h-full object-cover object-[center_30%] scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-luxury-black/60" />
+          <div className="absolute inset-0 bg-luxury-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-luxury-black/75 via-luxury-black/35 to-luxury-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/80 via-transparent to-luxury-black/30" />
         </div>
-        
-        <div className="relative z-10 text-center max-w-5xl px-6">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-          >
-            <span className="text-luxury-gold uppercase tracking-[0.6em] text-xs md:text-sm font-bold mb-8 block drop-shadow-lg">
-              Est. in the Heart of Lahore
-            </span>
-            <h1 className="text-6xl md:text-9xl font-serif text-white mb-10 leading-[0.9] italic drop-shadow-2xl">
-              Luxury Beauty,<br/>
-              <span className="text-luxury-gold not-italic">Timeless Confidence</span>
-            </h1>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-12">
-              <a 
-                href="#book-now" 
-                className="bg-luxury-gold text-white px-12 py-5 uppercase tracking-[0.3em] text-[10px] font-bold hover:bg-white hover:text-luxury-black transition-all duration-500 w-full md:w-auto shadow-2xl"
-              >
-                Reserve Your Glow
-              </a>
-              <Link 
-                to="/services" 
-                className="border border-white/30 backdrop-blur-md text-white px-12 py-5 uppercase tracking-[0.3em] text-[10px] font-bold hover:bg-white hover:text-luxury-black transition-all duration-500 w-full md:w-auto"
-              >
-                Our Collection
-              </Link>
-            </div>
-          </motion.div>
+
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 pt-28 pb-16 md:pt-32 md:pb-24">
+          <div className="max-w-2xl lg:max-w-3xl">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <div className="flex items-center gap-4 mb-6 md:mb-8">
+                <span className="h-px w-10 sm:w-14 bg-luxury-gold" aria-hidden />
+                <span className="text-luxury-gold text-[10px] sm:text-[11px] uppercase tracking-[0.22em] font-medium">
+                  Lahore · Premium Beauty & Training
+                </span>
+              </div>
+
+              <h1 className="font-serif text-white leading-[1.05] mb-5 md:mb-6">
+                <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight">
+                  {BRAND.name}
+                </span>
+                <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl italic text-luxury-gold/95 mt-1 md:mt-2">
+                  Beauty Salon
+                </span>
+              </h1>
+
+              <p className="text-white/75 text-sm sm:text-base font-light leading-relaxed max-w-md md:max-w-lg mb-8 md:mb-10">
+                {BRAND.tagline}. Expert hair, skincare, bridal artistry, and professional training — tailored to you in a calm, refined setting.
+              </p>
+
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+                <Link
+                  to="/booking"
+                  className="inline-flex items-center justify-center gap-2 bg-luxury-gold text-luxury-black px-8 py-3.5 sm:py-4 text-[10px] uppercase tracking-[0.2em] font-semibold hover:bg-white transition-colors duration-300 w-full sm:w-auto"
+                >
+                  Book Appointment
+                  <ArrowRight size={14} strokeWidth={2} />
+                </Link>
+                <a
+                  href="#book-now"
+                  className="inline-flex items-center justify-center px-8 py-3.5 sm:py-4 text-[10px] uppercase tracking-[0.2em] font-medium text-white border border-white/35 hover:bg-white/10 transition-colors duration-300 w-full sm:w-auto"
+                >
+                  Quick Inquiry
+                </a>
+                <Link
+                  to="/services"
+                  className="inline-flex items-center justify-center sm:ml-1 text-[10px] uppercase tracking-[0.16em] font-medium text-white/60 hover:text-luxury-gold transition-colors py-3 sm:py-0"
+                >
+                  View services
+                </Link>
+              </div>
+            </motion.div>
+
+            <motion.ul
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              className="mt-12 md:mt-16 pt-8 border-t border-white/10 flex flex-wrap gap-x-8 gap-y-4 text-[10px] uppercase tracking-[0.14em] text-white/50"
+            >
+              <li className="flex items-center gap-2">
+                <Sparkles size={12} className="text-luxury-gold shrink-0" strokeWidth={1.5} />
+                Bridal & event makeup
+              </li>
+              <li className="flex items-center gap-2">
+                <Star size={12} className="text-luxury-gold shrink-0" strokeWidth={1.5} />
+                Clinical-grade skincare
+              </li>
+              <li className="flex items-center gap-2">
+                <Users size={12} className="text-luxury-gold shrink-0" strokeWidth={1.5} />
+                Certified training programs
+              </li>
+            </motion.ul>
+          </div>
         </div>
-        
-        <motion.div 
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/40"
+
+        <motion.a
+          href="#book-now"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8, duration: 0.6 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-white/35 hover:text-white/60 transition-colors"
+          aria-label="Scroll to booking"
         >
-          <div className="w-[1px] h-20 bg-gradient-to-b from-white/60 to-transparent mx-auto" />
-        </motion.div>
+          <span className="text-[9px] uppercase tracking-[0.2em]">Explore</span>
+          <span className="block w-px h-12 bg-gradient-to-b from-white/50 to-transparent" />
+        </motion.a>
       </section>
 
       {/* Featured Services */}

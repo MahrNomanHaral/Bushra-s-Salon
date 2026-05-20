@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { AnimatePresence } from 'motion/react';
 
@@ -50,9 +50,12 @@ export default function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />
-                <Route path="/hair" element={<HairServices />} />
-                <Route path="/skin" element={<SkinServices />} />
-                <Route path="/beauty-body" element={<BeautyBodyServices />} />
+                <Route path="/hair-services" element={<HairServices />} />
+                <Route path="/skin-services" element={<SkinServices />} />
+                <Route path="/beauty-body-services" element={<BeautyBodyServices />} />
+                <Route path="/hair" element={<Navigate to="/hair-services" replace />} />
+                <Route path="/skin" element={<Navigate to="/skin-services" replace />} />
+                <Route path="/beauty-body" element={<Navigate to="/beauty-body-services" replace />} />
                 <Route path="/transformations" element={<Transformations />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/shop" element={<Shop />} />

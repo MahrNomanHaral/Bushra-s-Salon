@@ -3,6 +3,17 @@ import { Helmet } from 'react-helmet-async';
 import { PageTransition } from '../components/PageTransition';
 import { TRANSFORMATIONS, BRAND } from '../constants';
 
+const GALLERY_IMAGES = [
+  'https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&q=80&w=600',
+  'https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=600',
+  'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=600',
+  'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=600',
+  'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&q=80&w=600',
+  'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=600',
+  'https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&q=80&w=600',
+  'https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=600',
+];
+
 export default function Transformations() {
   return (
     <PageTransition>
@@ -68,9 +79,9 @@ export default function Transformations() {
           
           {/* Mock Grid for Gallery */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+            {GALLERY_IMAGES.map((src, i) => (
               <motion.div 
-                key={i}
+                key={src}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -78,7 +89,7 @@ export default function Transformations() {
                 className="aspect-square bg-luxury-nude overflow-hidden group"
               >
                 <img 
-                  src={`https://images.unsplash.com/photo-${1560869713 + i}-7d0a29430803?auto=format&fit=crop&q=80&w=600`} 
+                  src={src} 
                   alt="Gallery" 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" 
                 />
