@@ -1,0 +1,8 @@
+{
+  "name": "Bushra's Luxury Salon",
+  "description": "A premium, modern beauty salon and training center in Lahore, offering luxury hair, skin, and body treatments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
