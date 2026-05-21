@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   description: HAIR_SERVICES_CATEGORY.metaDescription,
 };
 
+export const dynamic = 'force-static';
+
 export default function HairServicesPage() {
   return (
     <ServiceCategoryLayout>

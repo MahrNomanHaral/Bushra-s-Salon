@@ -3,9 +3,15 @@ import { join } from 'node:path';
 
 const distDir = join(process.cwd(), 'dist');
 const publicDir = join(process.cwd(), 'public');
+const indexHtml = join(distDir, 'index.html');
 
 if (!existsSync(distDir)) {
   console.error('Vite build output not found. Run vite build first.');
+  process.exit(1);
+}
+
+if (!existsSync(indexHtml)) {
+  console.error('dist/index.html missing. Vite build may have failed.');
   process.exit(1);
 }
 

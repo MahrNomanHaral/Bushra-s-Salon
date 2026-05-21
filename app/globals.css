@@ -32,3 +32,20 @@
     @apply font-serif;
   }
 }
+
+@layer utilities {
+  .text-luxury-gradient {
+    background: linear-gradient(to right, #d4af37, #b8860b, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+  }
+
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+
+  .hover-gold {
+    @apply transition-colors duration-300 hover:text-luxury-gold;
+  }
+}

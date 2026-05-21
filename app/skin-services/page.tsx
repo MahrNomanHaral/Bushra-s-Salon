@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   description: SKIN_SERVICES_CATEGORY.metaDescription,
 };
 
+export const dynamic = 'force-static';
+
 export default function SkinServicesPage() {
   return (
     <ServiceCategoryLayout>

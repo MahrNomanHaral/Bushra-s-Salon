@@ -3,7 +3,7 @@ import { Service, Testimonial, Transformation } from './types';
 export const BRAND = {
   name: "Bushra's",
   fullName: "Bushra's Beauty Saloon & Training Center",
-  tagline: "Luxury Beauty, Timeless Confidence",
+  tagline: "Pakistan's Elite Luxury Beauty Experience",
   address: "Near Lahore Broast Bashir Street Number 8, Wahdat Rd, Karamabad Stop Rehmanpura Colony, Lahore, 52254",
   phone: "0321 4489719",
   whatsapp: "923214489719", // Format for link
