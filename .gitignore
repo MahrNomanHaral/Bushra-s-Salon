@@ -8,3 +8,6 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Standalone repo: https://github.com/MahrNomanHaral/aura-studio
+app/aura-studio/
