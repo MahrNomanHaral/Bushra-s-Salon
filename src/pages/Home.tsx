@@ -64,13 +64,13 @@ export default function Home() {
                 <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight">
                   {BRAND.name}
                 </span>
-                <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl italic text-luxury-gold/95 mt-1 md:mt-2">
-                  Beauty Salon
+                <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl italic text-luxury-gold/95 mt-2 md:mt-3 leading-snug">
+                  {BRAND.tagline}
                 </span>
               </h1>
 
               <p className="text-white/75 text-sm sm:text-base font-light leading-relaxed max-w-md md:max-w-lg mb-8 md:mb-10">
-                {BRAND.tagline}. Expert hair, skincare, bridal artistry, and professional training — tailored to you in a calm, refined setting.
+                Expert hair, skincare, bridal artistry, and professional training — tailored to you in a calm, refined setting.
               </p>
 
               <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
